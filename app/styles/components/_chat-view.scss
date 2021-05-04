@@ -1,0 +1,61 @@
+.chat-view {
+    height: 100%;
+
+    .top-bar {
+        background-color: $white-default;
+        border-bottom: $border-default;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        height: 165px;
+        padding: 45px;
+        text-align: center;
+
+        .title {
+            font-size: 30px;
+        }
+
+        .users {
+            margin-top: 5px;
+
+            .current-user {
+                font-size: 18px;
+                color: $red-default;
+            }
+        }
+    }
+
+    .chat-view-pane {
+        height: calc(100% - 165px);
+
+        .chat-window-visible {
+            height: calc(100% - 70px);
+            overflow-y: scroll;
+            padding: 20px;
+        }
+
+        .type-area {
+            background-color: $white-default;
+            margin: 0;
+            padding: 15px;
+
+            .message-input {
+                border: $border-default;
+                font-size: 16px;
+                height: 100%;
+                line-height: 25px;
+                padding: 7px 15px;
+                width: 100%;
+            }
+
+            .button-area {
+                text-align: center;
+
+                .send {
+                    font-size: 20px;
+                    font-weight: bold;
+                    line-height: 25px;
+                }
+            }
+
+        }
+    }
+}

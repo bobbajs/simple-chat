@@ -1,0 +1,15 @@
+<div class="header">
+    <span class="username">{{meUser.userName}}</span>
+    {{#if (eq duration 0)}}
+        {{t "sideBar.justSignedIn"}}
+    {{else}}
+        <span>{{t "sideBar.onlineDuration" duration=duration}}</span>
+    {{/if}}
+</div>
+<ul class="nav nav-sidebar room-list">
+    {{#each rooms as | room |}}
+        <li class={{if (eq activeRoom.id room.id) "active room" "room"}} {{action onSelectChat room}}>
+            {{room.name}}
+        </li>
+    {{/each}}
+</ul>

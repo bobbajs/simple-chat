@@ -1,0 +1,11 @@
+<div class="login-action-area">
+    {{input
+        class="username"
+        placeholder=(t "login.inputPlaceholder")
+        value=(mut userName)}}
+    {{ui-button
+        class="button-primary login-button"
+        label=(t "login.joinButton")
+        disabled=isUserNameEmpty
+        onClick=(action "joinChat")}}
+</div>

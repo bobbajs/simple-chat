@@ -1,0 +1,33 @@
+<div class="top-bar container-fluid">
+    <span class="title">{{activeRoom.name}}</span>
+    <div class="users">
+        <span class="current-user">{{meUser.userName}}</span>
+        {{#if notMeUsers}}
+            <span class="other-users">{{notMeUsers}}</span>
+        {{/if}}
+    </div>
+</div>
+<div class="chat-view-pane">
+    <div class="chat-window-visible" id="chatScrollArea">
+        {{#each formattedMessages as | message |}}
+            {{message-item
+                message=message.message
+                isReceived=message.isReceived
+                sender=message.name}}
+        {{/each}}
+    </div>
+    <div class="type-area row">
+        <div class="col-md-10">
+            {{input
+            class="message-input"
+            placeholder=(t "chatRoom.placeholder")
+            value=(mut messageToSend)}}
+        </div>
+        <div class="col-md-2 button-area">
+            {{ui-button
+            class="button-primary-transparent send"
+            label=(t "chatRoom.send")
+            onClick=(perform sendMessageTask)}}
+        </div>
+    </div>
+</div>

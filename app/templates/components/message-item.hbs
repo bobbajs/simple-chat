@@ -1,0 +1,29 @@
+{{#if isReceived}}
+    <div class="row received-message">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="message-cloud">
+                        {{message}}
+                    </div>
+                </div>
+                <div class="col-md-12 sender">
+                    {{sender}}
+                </div>
+            </div>
+        </div>
+    </div>
+{{else}}
+    <div class="row sent-message">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="message-cloud">
+                        {{message}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}

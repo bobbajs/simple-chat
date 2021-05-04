@@ -1,0 +1,60 @@
+@import 'variables';
+@import 'components';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial';
+    margin: 0;
+
+    > .ember-view {
+        height: 100%;
+    }
+}
+
+.login-action-area {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -49%);
+    width: 400px;
+
+    .username {
+        border: $border-default;
+        border-radius: 4px;
+        display: block;
+        font-size: 16px;
+        height: 40px;
+        margin-bottom: 16px;
+        padding: 0 15px;
+        width: 100%;
+    }
+
+    .login-button {
+        font-size: 16px;
+        padding: 10px 15px;
+        width: 100%;
+    }
+}
+
+.chat-room {
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+
+    .side-bar-area {
+        float:left;
+        height: 100%;
+        width: 320px;
+    }
+
+    .chat-pane-area {
+        float:left;
+        background-color: $gray-light;
+        height: 100%;
+        width: calc(100% - 320px);
+    }
+}
+@import "ember-bootstrap/bootstrap";

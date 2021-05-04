@@ -1,0 +1,21 @@
+.btn {
+    border: none;
+    border-radius: 4px;
+    font-size: $font-size-base;
+
+    &[disabled] {
+        opacity: .3;
+    }
+
+    &.button-primary {
+        background-color: $red-default;
+        color: $white-default;
+    }
+
+    &.button-primary-transparent {
+        background-color: transparent;
+        color: $blue-default;
+    }
+
+
+}

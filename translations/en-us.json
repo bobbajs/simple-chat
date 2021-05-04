@@ -1,0 +1,14 @@
+{
+    "chatRoom": {
+        "placeholder": "Type a message...",
+        "send": "Send"
+    },
+    "login": {
+        "joinButton": "Join the DoorDash Chat!",
+        "inputPlaceholder": "Type your username..."
+    },
+    "sideBar": {
+        "justSignedIn": "Just signed in",
+        "onlineDuration": "Online for {duration} minutes"
+    }
+}

@@ -1,0 +1,29 @@
+.message-item {
+    .message-cloud {
+        background-color: white;
+        border: none;
+        border-radius: 25px;
+        color: $gray-darker;
+        font-size: 15px;
+        margin: 10px 0 5px 0;
+        width: fit-content;
+        padding: 15px;
+    }
+
+    .sender {
+        font-weight: bold;
+        color: $gray-mid-dark;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .sent-message {
+        text-align: right;
+
+        .message-cloud {
+            background-color: $red-default;
+            color: $white-default;
+            float: right;
+        }
+    }
+}

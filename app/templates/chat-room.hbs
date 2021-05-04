@@ -1,0 +1,13 @@
+<div class="chat-room">
+    {{!-- <div class="area"> --}}
+        <div class="side-bar-area">
+            {{side-bar
+                rooms=(readonly rooms)
+                activeRoom=(readonly activeRoom)
+                onSelectChat=(action "selectChat")}}
+        </div>
+        <div class="chat-pane-area">
+            {{chat-view
+                activeRoom=(readonly activeRoom)}}
+        </div>
+</div>
