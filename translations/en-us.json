@@ -5,7 +5,8 @@
     },
     "login": {
         "joinButton": "Join the DoorDash Chat!",
-        "inputPlaceholder": "Type your username..."
+        "inputPlaceholder": "Type your username...",
+        "missingUserName": "User name is required"
     },
     "sideBar": {
         "justSignedIn": "Just signed in",

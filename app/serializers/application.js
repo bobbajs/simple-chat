@@ -9,6 +9,7 @@ export default DS.RESTSerializer.extend({
 
         // normalize response to the format that Ember Store expects.
         set(newPayload, rootName, payload);
+        console.log(newPayload);
 
         return this._super(store, primaryModelClass, newPayload, id, requestType);
     }

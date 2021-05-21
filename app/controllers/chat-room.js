@@ -24,9 +24,7 @@ export default Controller.extend({
 
     actions: {
         selectChat(room) {
-            console.log('controller active room', room);
             this.set('activeRoom', room);
         }
     }
-
 });

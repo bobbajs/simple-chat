@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import Component from '@ember/component';
-import { computed, get } from '@ember/object';
+import { computed } from '@ember/object';
+import { debounce } from '@ember/runloop';
 import { inject as service } from '@ember/service';
 import { isPresent } from '@ember/utils';
 import { task, timeout } from 'ember-concurrency';
@@ -67,7 +68,11 @@ export default Component.extend({
             yield this.get('roomRepository').sendMessage(data, this.get('activeRoom.id'));
 
             this.set('messageToSend', null);
-            this.scrollToBottom();
+
+            debounce(this, () => {
+                this.scrollToBottom();
+            }, 500);
+
         } catch(e) {
             // Future improvement: Handle error
             console.log('error', e);

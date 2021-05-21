@@ -1,11 +1,16 @@
 <div class="login-action-area">
+    {{#if hasMissingUserNameError}}
+        <div class="error-area">
+            <span class="error-message">{{t "login.missingUserName"}}</span>
+        </div>
+    {{/if}}
     {{input
-        class="username"
+        class=(if hasMissingUserNameError "username error" "username")
         placeholder=(t "login.inputPlaceholder")
-        value=(mut userName)}}
+        value=(mut userName)
+        action="joinChat"}}
     {{ui-button
         class="button-primary login-button"
         label=(t "login.joinButton")
-        disabled=isUserNameEmpty
         onClick=(action "joinChat")}}
 </div>

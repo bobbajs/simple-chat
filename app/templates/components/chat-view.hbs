@@ -19,15 +19,16 @@
     <div class="type-area row">
         <div class="col-md-10">
             {{input
-            class="message-input"
-            placeholder=(t "chatRoom.placeholder")
-            value=(mut messageToSend)}}
+                class="message-input"
+                placeholder=(t "chatRoom.placeholder")
+                value=(mut messageToSend)
+                action=(perform sendMessageTask)}}
         </div>
         <div class="col-md-2 button-area">
             {{ui-button
-            class="button-primary-transparent send"
-            label=(t "chatRoom.send")
-            onClick=(perform sendMessageTask)}}
+                class="button-primary-transparent send"
+                label=(t "chatRoom.send")
+                onClick=(perform sendMessageTask)}}
         </div>
     </div>
 </div>

@@ -21,6 +21,14 @@ body {
     transform: translate(-50%, -49%);
     width: 400px;
 
+    .error-area {
+        margin-bottom: 10px;
+
+        .error-message {
+            color: $red-default;
+        }
+    }
+
     .username {
         border: $border-default;
         border-radius: 4px;
@@ -30,6 +38,10 @@ body {
         margin-bottom: 16px;
         padding: 0 15px;
         width: 100%;
+
+        &.error {
+            border: solid 1px $red-default;
+        }
     }
 
     .login-button {
